@@ -1,4 +1,5 @@
 #coding=utf-8
+
 from functools import wraps
 from utils import *
 from models import *
@@ -45,6 +46,3 @@ def fastbin():
 def free(index):
     chunk  = t_chunk_list[index]
     chunk2bin(chunk)
-
-
-
