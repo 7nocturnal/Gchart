@@ -74,9 +74,7 @@ Gchart
      |
      +---+ views.py        show images
      |
-     |
-     +---+ config.py
-     |
+     |     |
      |
      +---+ rules.py        define malloc and free rules
      |
