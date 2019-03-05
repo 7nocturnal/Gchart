@@ -3,7 +3,7 @@
 t_chunk_list = []           #物理上的chunk
 fast_bin = [[0 for i in range(2)] for i in range(7)]        #fast_bin
 
-small_bin = [[0 for i in range(2)] for i in range(62)]              #smallbin
+small_bin = [[0 for i in range(2)] for i in range(62)]      #smallbin
 
 large_bin = []              #large_bin  保留字段
 unsorted_bin = []           #unsorted_bin
