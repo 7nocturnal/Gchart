@@ -20,29 +20,29 @@ def top_delete(func):
     @wraps(func)
     def with_logging(*args, **kwargs):
         index = args[0]
-        free(index)
+        # free(index)
         return func(*args, **kwargs)
     return with_logging
 
 
-def show():
-    print("----------------------")
-    for i in t_chunk_list:
-        print("* pre_size is " + str(i.prev_size))
-        print("* size is " + str(i.size))
-        print("* fd is " + str(i.fd))
-        print("----------------------")
+# def show():
+#     print("----------------------")
+#     for i in t_chunk_list:
+#         print("* pre_size is " + str(i.prev_size))
+#         print("* size is " + str(i.size))
+#         print("* fd is " + str(i.fd))
+#         print("----------------------")
 
 
-def fastbin():
-    for i in fast_bin:
-        print(hex(i.size) + " -> "),
-    print("\n")
+# def fastbin():
+#     for i in fast_bin:
+#         print(hex(i.size) + " -> "),
+#     print("\n")
 
 
 
 
 
-def free(index):
-    chunk  = t_chunk_list[index]
-    chunk2bin(chunk)
+# def free(index):
+#     chunk  = t_chunk_list[index]
+#     chunk2bin(chunk)
