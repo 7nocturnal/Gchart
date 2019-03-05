@@ -12,15 +12,10 @@ version 0.0.0
 
 ### 1. 数据结构
 
-**chunk**
-
-首先将堆进行一定程度的抽象，堆主要由堆块组成，所以先把堆块的结构定义出来，利用 python 中的类可以很容易的实现堆块结构。
-
-
 
 **heap**
 
-堆由堆块组成，考察 heap 在 malloc 、free 过程的行为，可以将其抽象为一个栈(python 中可以使用 list 表示)，如图
+为了构建方便将其抽象为一个栈(python 中可以使用 list 表示)，如图
 
 ```
                      malloc a chunk
@@ -58,7 +53,7 @@ version 0.0.0
 
 **bins**
 
-缓冲区的存在使得整个 malloc 变得很复杂，参照 heap 的数据结构，除 largebin 外的 bins 都可以使用上面的栈结构实现。
+缓冲区的存在使得整个 malloc 变得很复杂，参照 heap 的数据结构， bins 将以链表形式存在
 
 
 
@@ -68,7 +63,8 @@ version 0.0.0
 
 ```
 Gchart
-     +
+     |
+     +---+ config.py
      |
      +---+ Gchart.py       main file
      |
