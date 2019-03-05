@@ -24,14 +24,13 @@ def top_delete(func):
         return func(*args, **kwargs)
     return with_logging
 
-
-# def show():
-#     print("----------------------")
-#     for i in t_chunk_list:
-#         print("* pre_size is " + str(i.prev_size))
-#         print("* size is " + str(i.size))
-#         print("* fd is " + str(i.fd))
-#         print("----------------------")
+def show():
+    print("----------------------")
+    for i in t_chunk_list:
+        print("* pre_size is " + str(i.prev_size))
+        print("* size is " + str(i.size))
+        print("* fd is " + str(i.fd))
+        print("----------------------")
 
 
 # def fastbin():
